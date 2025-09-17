@@ -73,7 +73,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => OtpVerificationScreen(), 
+                      builder: (context) => OtpVerificationScreen(),
                     ),
                   );
                 },

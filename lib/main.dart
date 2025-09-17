@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zybo_test/views/auth/otp_screen.dart';
+import 'package:zybo_test/views/auth/otp_verification_screen.dart';
 import 'package:zybo_test/views/splash%20screen/splash_screen.dart';
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashScreen(),
         '/otpscreen': (context) => OtpScreen(),
+        '/otpverificationscreen': (context) => OtpVerificationScreen(),
       },
     );
   }
