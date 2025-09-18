@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zybo_test/blocs/auth_blocs/login%20bloc/bloc/login_user_bloc.dart';
+import 'package:zybo_test/blocs/login%20bloc/bloc/login_user_bloc.dart';
 import 'package:zybo_test/views/auth/name_register_screen.dart';
-import 'package:zybo_test/views/home%20screen/home_screen.dart';
 import 'package:zybo_test/widgets/countdown.dart';
+import 'package:zybo_test/widgets/navbar.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
   final String? phonenumber;
@@ -160,7 +160,9 @@ class OtpVerificationScreen extends StatelessWidget {
                           } else {
                             // New user → navigate to name registration
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (_) => RegisterNameScreen()));
+                                builder: (_) => RegisterNameScreen(
+                                      phoneNumber: phonenumber!,
+                                    )));
                           }
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(

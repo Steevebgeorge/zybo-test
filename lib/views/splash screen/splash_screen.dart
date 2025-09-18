@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:zybo_test/constants/secure_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,17 +17,30 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    //code to control animation in logo during startup
     Future.delayed(const Duration(milliseconds: 200), () {
       setState(() {
         _opacity = 1.0;
       });
     });
 
-    // code to navigate from splas screen to otp screen
     Timer(const Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(context, '/otpscreen');
+      _checkLogin();
     });
+  }
+
+  Future<void> _checkLogin() async {
+    final storage = SecureStorageService();
+    final token = await storage.getToken();
+
+    if (token != null && token.isNotEmpty) {
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/homescreen');
+      }
+    } else {
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/otpscreen');
+      }
+    }
   }
 
   @override

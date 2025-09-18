@@ -4,7 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zybo_test/blocs/auth_blocs/bloc/verify_user_bloc.dart';
+import 'package:zybo_test/blocs/verify%20bloc/verify_user_bloc.dart';
 import 'package:zybo_test/views/auth/otp_verification_screen.dart';
 
 class OtpScreen extends StatefulWidget {
