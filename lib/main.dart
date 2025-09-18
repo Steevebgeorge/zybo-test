@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:zybo_test/constants/app_providers.dart';
 import 'package:zybo_test/views/auth/otp_screen.dart';
 import 'package:zybo_test/views/auth/otp_verification_screen.dart';
 import 'package:zybo_test/views/splash%20screen/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(AppProviders());
 }
 
 class MyApp extends StatelessWidget {
