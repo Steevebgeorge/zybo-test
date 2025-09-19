@@ -40,5 +40,9 @@ A Flutter project to demonstrate app functionality and skill testing with API in
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/<your-username>/zybo_test.git
+git clone https://github.com/Steevebgeorge/zybo_test.git
+cd zybo_test
+run flutter clean
+run flutter pub get
+run project
 
