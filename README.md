@@ -9,7 +9,6 @@ A Flutter project to demonstrate app functionality and skill testing with API in
 
 ## Screenshots
 
-> Replace the image links below with your actual screenshots  
 
 ![Home Screen](screenshots/Home.jpg)  
 ![Login Screen](screenshots/Login.jpg)  
