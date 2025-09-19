@@ -15,7 +15,7 @@ class WishlistScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("My Wishlist")),
+      appBar: AppBar(title: Text("Wishlist"),backgroundColor: Colors.white,),
       body: BlocBuilder<WishlistBloc, WishlistState>(
         builder: (context, state) {
           if (state is WishlistLoading) {
