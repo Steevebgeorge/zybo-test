@@ -12,8 +12,8 @@ A Flutter project to demonstrate app functionality and skill testing with API in
 > Replace the image links below with your actual screenshots  
 
 ![Home Screen](screenshots/Home.jpg)  
-![Wishlist Screen](screenshots/wishlist_screen.png)  
-![Product Details](screenshots/product_details.png)  
+![Login Screen](screenshots/Login.jpg)  
+![Product Details](screenshots/otp_verification.jpg)  
 
 ---
 
@@ -21,7 +21,6 @@ A Flutter project to demonstrate app functionality and skill testing with API in
 
 - Authentication (Login & Register with OTP)
 - Product listing and detailed view
-- Wishlist feature with add/remove functionality
 - API integration using HTTP and secure storage for JWT
 - State management using BLoC
 - Responsive UI with Flutter widgets
