@@ -9,3 +9,5 @@ class BannerModel {
     );
   }
 }
+
+//to display banner in homepage

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zybo_test/blocs/Register%20bloc/register_user_bloc.dart';
-import 'package:zybo_test/widgets/navbar.dart';
 
 class RegisterNameScreen extends StatelessWidget {
   final String phoneNumber;
@@ -18,8 +17,9 @@ class RegisterNameScreen extends StatelessWidget {
       body: BlocConsumer<RegisterUserBloc, RegisterUserState>(
         listener: (context, state) {
           if (state is RegisterUserSuccess) {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const HomeScreen()),
+            Navigator.of(context).pushNamedAndRemoveUntil(
+              '/homescreen',
+              ModalRoute.withName('/homescreen'),
             );
           } else if (state is RegisterUserError) {
             ScaffoldMessenger.of(context).showSnackBar(

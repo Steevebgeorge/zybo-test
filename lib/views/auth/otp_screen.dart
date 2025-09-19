@@ -74,8 +74,6 @@ class _OtpScreenState extends State<OtpScreen> {
               ],
             ),
             SizedBox(height: size.height * 0.04),
-
-            /// --- FIXED: BlocConsumer now properly used ---
             BlocConsumer<VerifyUserBloc, VerifyUserState>(
               listener: (context, state) {
                 if (state is VerifyUserSuccess) {
@@ -140,12 +138,13 @@ class _OtpScreenState extends State<OtpScreen> {
                   RichText(
                     textAlign: TextAlign.center,
                     text: TextSpan(
-                      style: const TextStyle(color: Colors.black, fontSize: 10),
+                      style:
+                          GoogleFonts.oxygen(color: Colors.black, fontSize: 10),
                       children: [
                         const TextSpan(text: 'By Continuing you accepting the'),
                         TextSpan(
                           text: ' Terms of Use &\nPrivacy Policy',
-                          style: const TextStyle(
+                          style: GoogleFonts.oxygen(
                             decoration: TextDecoration.underline,
                             color: Colors.black,
                           ),

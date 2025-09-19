@@ -5,15 +5,14 @@ import 'package:http/http.dart' as http;
 import 'package:zybo_test/models/verifyusermodel.dart';
 
 class VerifyRepository {
-  final String baseUrl =
-      "https://skilltestflutter.zybotechlab.com/api"; // use HTTPS!
+  final String baseUrl = "https://skilltestflutter.zybotechlab.com/api";
 
   Future<VerifyUserModel> verifyUser(String phoneNumber) async {
     final url = Uri.parse("$baseUrl/verify/");
 
     final response = await http.post(
       url,
-      body: {"phone_number": phoneNumber}, // form-data (not JSON)
+      body: {"phone_number": phoneNumber},
     );
 
     log("Status: ${response.statusCode}");

@@ -6,8 +6,7 @@ import 'package:zybo_test/constants/secure_storage.dart';
 import 'package:zybo_test/models/loginmodel.dart';
 
 class LoginRepository {
-  final String baseUrl =
-      "https://skilltestflutter.zybotechlab.com/api"; // ✅ use HTTPS
+  final String baseUrl = "https://skilltestflutter.zybotechlab.com/api";
 
   Future<LoginModel> loginUser(String phoneNumber) async {
     final url = Uri.parse("$baseUrl/login-register/");
@@ -16,7 +15,6 @@ class LoginRepository {
       url,
       body: {
         "phone_number": phoneNumber,
-        // API also expects `first_name` when registering
       },
     );
 

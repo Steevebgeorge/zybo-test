@@ -39,3 +39,5 @@ class Token {
     return {'access': access};
   }
 }
+
+// to register user

@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
@@ -48,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
               gap: 8,
               activeColor: Colors.white,
               color: Colors.black,
-              tabBackgroundColor: Colors.purpleAccent,
+              tabBackgroundColor: const Color(0xFF5E5BE2),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               selectedIndex: _selectedIndex,
               onTabChange: (index) {

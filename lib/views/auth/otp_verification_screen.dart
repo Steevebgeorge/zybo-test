@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zybo_test/blocs/login%20bloc/bloc/login_user_bloc.dart';
 import 'package:zybo_test/views/auth/name_register_screen.dart';
 import 'package:zybo_test/widgets/countdown.dart';
-import 'package:zybo_test/widgets/navbar.dart';
 
 class OtpVerificationScreen extends StatelessWidget {
   final String? phonenumber;
@@ -129,7 +128,10 @@ class OtpVerificationScreen extends StatelessWidget {
                         color: Colors.black,
                       ),
                       children: [
-                        const TextSpan(text: "Don't receive code? "),
+                        TextSpan(
+                          text: "Don't receive code? ",
+                          style: GoogleFonts.oxygen(),
+                        ),
                         TextSpan(
                           text: "Re-send",
                           style: GoogleFonts.oxygen(
@@ -143,8 +145,6 @@ class OtpVerificationScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 25),
-
-              // 🔹 Submit button with proper handling for new/existing users
               Builder(
                 builder: (context) {
                   return GestureDetector(
@@ -153,12 +153,10 @@ class OtpVerificationScreen extends StatelessWidget {
                       if (enteredOtp.length == 4) {
                         if (enteredOtp == (otp ?? "1234")) {
                           if (isUser == true) {
-                            // Existing user → trigger login bloc
                             context.read<LoginUserBloc>().add(
                                   LoginUserRequested(phoneNumber: phonenumber!),
                                 );
                           } else {
-                            // New user → navigate to name registration
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (_) => RegisterNameScreen(
                                       phoneNumber: phonenumber!,
@@ -188,8 +186,10 @@ class OtpVerificationScreen extends StatelessWidget {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text(state.user.message)),
                             );
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (_) => HomeScreen()),
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                              '/homescreen', // The new route you want to push
+                              ModalRoute.withName(
+                                  '/homescreen'), 
                             );
                           } else if (state is LoginUserError) {
                             ScaffoldMessenger.of(context).showSnackBar(
