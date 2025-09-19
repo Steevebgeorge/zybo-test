@@ -1,16 +1,19 @@
-# zybo_test
+# Skill Test
 
-A new Flutter project.
+A Flutter project for testing skills and demonstrating app functionality.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to run the project locally on your machine:
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter installed on your system ([Flutter installation guide](https://docs.flutter.dev/get-started/install))
+- An IDE like VS Code, Android Studio, or IntelliJ
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/<your-username>/zybo_test.git
