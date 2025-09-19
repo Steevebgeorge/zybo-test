@@ -11,7 +11,7 @@ A Flutter project to demonstrate app functionality and skill testing with API in
 
 > Replace the image links below with your actual screenshots  
 
-![Home Screen](screenshots/home_screen.png)  
+![Home Screen](screenshots/Home.jpg)  
 ![Wishlist Screen](screenshots/wishlist_screen.png)  
 ![Product Details](screenshots/product_details.png)  
 
